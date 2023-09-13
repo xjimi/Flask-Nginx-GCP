@@ -10,8 +10,13 @@ services:
       - TZ=Asia/Taipei
 
   nginx:
-    build: ./nginx
+    container_name: nginx
+    image: nginx:latest
     ports:
       - "80:80"
+    volumes:
+    - type: bind
+      source: ./nginx/nginx.conf
+      target: /etc/nginx/nginx.conf
     depends_on:
       - flask
