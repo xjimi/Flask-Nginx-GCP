@@ -10,4 +10,4 @@ RUN pip3 install -r requirements.txt
 # Copy the current directory contents into the container at /app
 ADD . /app
 
-CMD ["python3", "app.py"]
+CMD ["uwsgi", "app.ini"]
