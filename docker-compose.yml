@@ -3,9 +3,13 @@ version: "3.11"
 services:
 
   flask:
+    container_name: flask
+    hostname: app
     build: ./flask
     expose:
       - 8080
+    #ports:
+    #  - "8080:5000"
     environment:
       - TZ=Asia/Taipei
 
