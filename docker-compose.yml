@@ -8,8 +8,8 @@ services:
     build: ./flask
     expose:
       - 8080
-    #ports:
-    #  - "8080:5000"
+    ports:
+     - "8080:5000"
     environment:
       - TZ=Asia/Taipei
 
